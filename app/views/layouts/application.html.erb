@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Yelpsearch</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+   <style> body {padding: 0; margin: 0;} </style>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+
+</head>
+<body>
+
+
+<a href="/"><h1 style = "font-size: 70px; text-align: center;">PIZZA REVIEWS</h1></a>        
+
+
+<%= yield %>
+
+</body>
+</html>

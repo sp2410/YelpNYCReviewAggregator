@@ -1,0 +1,29 @@
+<%=  render "pages/searchform" %>
+
+
+<div class="centercol" style = "text-align:center;">
+
+<h1>SEARCH RESULTS</h1> 
+
+<% if @avg.present? %>
+	<h1>Overall Average Rating <%= @avg[0]  %></h1>
+<% else %>
+	<h1>No Average Rating Found</h1>
+<% end %>
+
+
+<% if @items.present? %>
+  <% @items.each do |item| %>
+
+    <div class="card text-center" style="width: 80%; padding: 10px 10px; border: 1px solid black; margin: auto;">
+      <div class="card-block" style = "text-align:center;">
+          <p class="card-text">Review: <%= item[0] %></p>          
+          <p class="card-text">Rating: <%= item[1] %></p>
+      </div>
+    </div>
+
+  <% end %>
+
+<% else %>
+	<h1>No reviews were found, please change the search parameters</h1>
+<% end %>

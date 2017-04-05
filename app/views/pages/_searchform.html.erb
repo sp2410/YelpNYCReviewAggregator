@@ -1,0 +1,22 @@
+<h1 style= "text-align:center">Directions</h1>
+<ul style= "text-align:center; list-style: none">
+	<li> 1. Enter the Name of the Resturant and number of reviews, if there be no results, try adding new york at the end of the name,  if there be an error from abrupt URLs, follow steps 2 - 4 to try a different solution
+	</li>
+	<li> 2. Find the URL Unique ID of the Resturant from Yelp's website e.g. Pizzarte New York URL is : https://www.yelp.com/biz/pizzarte-new-york 
+	</li>
+	<li> 3. Its  Url Unique ID: pizzarte-new-york </>
+	<li> 4. Enter the URL Unique ID(Dont enter normal name in URI optional field) in the optional field and number of reviews you want in the search box below, please leave the name field blank
+	</li>
+</ul>
+
+
+ <div class="centercol">
+        <%= form_tag search_pages_path, class: 'navbar-form navbar-center', method: :get do |f| %>
+        <p style="font-size: 30px; margin: 70px;">SEARCH AN NYC PIZZA SHOP</p>        
+        <%= text_field_tag :name, nil, placeholder: 'Pizza Shop Name',class: 'form-control' %>
+        <%= text_field_tag :number, nil, placeholder: 'Number of Reviews', class: 'form-control' %>        
+        <%= text_field_tag :optional, nil, placeholder: 'Optional: Needs URI ID', class: 'form-control' %>        
+        <%= submit_tag 'Search' %>
+      <% end %>    
+    </section>
+</div>
